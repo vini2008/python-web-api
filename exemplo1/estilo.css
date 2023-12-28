@@ -1,0 +1,28 @@
+body {
+    background-color: aquamarine;
+}
+
+h1 {
+    color: blue;
+}
+img {
+    border-radius: 10%;
+}
+
+#logo_django {
+    width: 300px;
+}
+
+#logo_python {
+    width: 300px;
+}
+p {
+    padding: 5px;
+}
+
+p.principal{
+    border: 1px dashed black;
+}
+p.avisando{
+    border: solid red;
+}

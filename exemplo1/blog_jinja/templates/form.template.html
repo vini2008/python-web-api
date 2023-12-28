@@ -1,0 +1,23 @@
+{% extends "base.template.html" %}
+
+{% block headline %}
+        New Post 
+{% endblock %}
+{% macro function(name, type="input")%}
+        <label for="{{name}}"> {{ name | capitalize }}:</label><br>
+        {%- if type == "input" %}
+                <input type="text" name="{{ name }}"><br>
+        {%- elif type == "textarea" %}
+                <textarea name="{{name}}" cols="30" rows="5"></textarea><br>
+        {%- endif %}
+{% endmacro %}
+
+{% block content %}
+<form action="/new" method="post">
+        {{ function("title") }}
+        {{ function("content", type="textarea") }}
+        {{ function("author") }}
+        <input type="submit" value="ENVIAR">
+</form>
+{% endblock %}
+
